@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Woodyork</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'wood': '#C8A27C',
+                        'dark': '#1A1A1A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#1A1A1A] text-white font-[Poppins]">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-dark/80 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="text-2xl font-semibold">woodyork</a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="./about.html" class="text-gray-300 hover:text-wood transition">about</a>
+                    <a href="./projects.html" class="text-wood transition">projects</a>
+                    <a href="./services.html" class="text-gray-300 hover:text-wood transition">services</a>
+                    <a href="../index.html#contact" class="text-gray-300 hover:text-wood transition">contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4 bg-dark/95 p-4 rounded-lg">
+                    <a href="./about.html" class="text-gray-300 hover:text-wood transition">about</a>
+                    <a href="./projects.html" class="text-wood transition">projects</a>
+                    <a href="./services.html" class="text-gray-300 hover:text-wood transition">services</a>
+                    <a href="../index.html#contact" class="text-gray-300 hover:text-wood transition">contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-20 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl font-bold mb-6">Our <span class="text-wood">Projects</span></h1>
+            <p class="text-gray-400 max-w-2xl">Explore our portfolio of completed projects, showcasing our expertise in design and construction.</p>
+        </div>
+    </section>
+
+    <!-- Project Categories -->
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button class="px-6 py-2 bg-wood text-white rounded hover:bg-wood/90 transition">All</button>
+                <button class="px-6 py-2 border border-wood text-wood hover:bg-wood hover:text-white transition">Residential</button>
+                <button class="px-6 py-2 border border-wood text-wood hover:bg-wood hover:text-white transition">Commercial</button>
+                <button class="px-6 py-2 border border-wood text-wood hover:bg-wood hover:text-white transition">Public Space</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Cards -->
+                <a href="/woodyork/pages/project-detail.html" class="group relative overflow-hidden rounded-lg transition-transform duration-500 hover:-translate-y-2 block">
+                    <div class="aspect-w-4 aspect-h-3">
+                        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" alt="Modern Luxury" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-100 group-hover:opacity-90 transition-opacity">
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <span class="text-wood text-sm">Residential</span>
+                            <h3 class="text-xl font-semibold mt-2">Modern Luxury Villa</h3>
+                            <p class="text-gray-300 mt-2">A contemporary villa design featuring open spaces and natural light.</p>
+                            <div class="inline-flex items-center mt-4 text-wood group-hover:text-white transition-colors">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/woodyork/pages/project-detail.html" class="group relative overflow-hidden rounded-lg transition-transform duration-500 hover:-translate-y-2 block">
+                    <div class="aspect-w-4 aspect-h-3">
+                        <img src="https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg" alt="Modern Minimalist" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-100 group-hover:opacity-90 transition-opacity">
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <span class="text-wood text-sm">Commercial</span>
+                            <h3 class="text-xl font-semibold mt-2">Urban Office Space</h3>
+                            <p class="text-gray-300 mt-2">Modern office design promoting collaboration and productivity.</p>
+                            <div class="inline-flex items-center mt-4 text-wood group-hover:text-white transition-colors">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/woodyork/pages/project-detail.html" class="group relative overflow-hidden rounded-lg transition-transform duration-500 hover:-translate-y-2 block">
+                    <div class="aspect-w-4 aspect-h-3">
+                        <img src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg" alt="Japanese Minimalist" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-100 group-hover:opacity-90 transition-opacity">
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <span class="text-wood text-sm">Public Space</span>
+                            <h3 class="text-xl font-semibold mt-2">City Park Pavilion</h3>
+                            <p class="text-gray-300 mt-2">Public gathering space combining nature and architecture.</p>
+                            <div class="inline-flex items-center mt-4 text-wood group-hover:text-white transition-colors">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/woodyork/pages/project-detail.html" class="group relative overflow-hidden rounded-lg transition-transform duration-500 hover:-translate-y-2 block">
+                    <div class="aspect-w-4 aspect-h-3">
+                        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg" alt="Coastal Home" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-100 group-hover:opacity-90 transition-opacity">
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <span class="text-wood text-sm">Residential</span>
+                            <h3 class="text-xl font-semibold mt-2">Coastal Dream House</h3>
+                            <p class="text-gray-300 mt-2">Beachfront residence with panoramic ocean views.</p>
+                            <div class="inline-flex items-center mt-4 text-wood group-hover:text-white transition-colors">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/woodyork/pages/project-detail.html" class="group relative overflow-hidden rounded-lg transition-transform duration-500 hover:-translate-y-2 block">
+                    <div class="aspect-w-4 aspect-h-3">
+                        <img src="https://images.pexels.com/photos/323776/pexels-photo-323776.jpeg" alt="Shopping Mall" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-100 group-hover:opacity-90 transition-opacity">
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <span class="text-wood text-sm">Commercial</span>
+                            <h3 class="text-xl font-semibold mt-2">Modern Shopping Mall</h3>
+                            <p class="text-gray-300 mt-2">Contemporary retail space designed for optimal customer experience.</p>
+                            <div class="inline-flex items-center mt-4 text-wood group-hover:text-white transition-colors">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/woodyork/pages/project-detail.html" class="group relative overflow-hidden rounded-lg transition-transform duration-500 hover:-translate-y-2 block">
+                    <div class="aspect-w-4 aspect-h-3">
+                        <img src="https://images.pexels.com/photos/157811/pexels-photo-157811.jpeg" alt="Community Center" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-100 group-hover:opacity-90 transition-opacity">
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <span class="text-wood text-sm">Public Space</span>
+                            <h3 class="text-xl font-semibold mt-2">Community Center</h3>
+                            <p class="text-gray-300 mt-2">Multi-purpose facility serving local community needs.</p>
+                            <div class="inline-flex items-center mt-4 text-wood group-hover:text-white transition-colors">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">WOODYORK.</p>
+                    <p class="text-sm text-gray-600">We're welcoming you always.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div>
+                        <h4 class="text-sm font-semibold mb-4">Quick links</h4>
+                        <ul class="text-sm text-gray-400">
+                            <li><a href="./about.html" class="hover:text-wood">About Us</a></li>
+                            <li><a href="./services.html" class="hover:text-wood">Services</a></li>
+                            <li><a href="./projects.html" class="text-wood">Projects</a></li>
+                            <li><a href="../index.html#contact" class="hover:text-wood">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold mb-4">Services</h4>
+                        <ul class="text-sm text-gray-400">
+                            <li>Design of Houses</li>
+                            <li>Interior Design</li>
+                            <li>Exterior Design</li>
+                            <li>Custom Furniture</li>
+                            <li>Design of Public Objects</li>
+                            <li>Construction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-600">
+                ©2025 Woodyork. All rights reserved - Produced by Voxlabs
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.innerHTML = isOpen 
+                ? '<i class="fas fa-times text-2xl"></i>' 
+                : '<i class="fas fa-bars text-2xl"></i>';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+            }
+        });
+
+        // Project filtering functionality
+        const filterButtons = document.querySelectorAll('button');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-wood', 'text-white');
+                    if (!btn.classList.contains('hover:bg-wood')) {
+                        btn.classList.add('border', 'border-wood', 'text-wood', 'hover:bg-wood', 'hover:text-white');
+                    }
+                });
+                
+                // Add active class to clicked button
+                button.classList.remove('border', 'border-wood', 'text-wood', 'hover:bg-wood', 'hover:text-white');
+                button.classList.add('bg-wood', 'text-white');
+            });
+        });
+    </script>
+</body>
+</html>
