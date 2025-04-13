@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail - Woodyork</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'wood': '#C8A27C',
+                        'dark': '#1A1A1A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#1A1A1A] text-white font-[Poppins]">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-dark/80 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="text-2xl font-semibold">woodyork</a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="./about.html" class="text-gray-300 hover:text-wood transition">about</a>
+                    <a href="./projects.html" class="text-wood transition">projects</a>
+                    <a href="./services.html" class="text-gray-300 hover:text-wood transition">services</a>
+                    <a href="../index.html#contact" class="text-gray-300 hover:text-wood transition">contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4 bg-dark/95 p-4 rounded-lg">
+                    <a href="./about.html" class="text-gray-300 hover:text-wood transition">about</a>
+                    <a href="./projects.html" class="text-wood transition">projects</a>
+                    <a href="./services.html" class="text-gray-300 hover:text-wood transition">services</a>
+                    <a href="../index.html#contact" class="text-gray-300 hover:text-wood transition">contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <a href="./projects.html" class="inline-flex items-center text-wood hover:text-white transition-colors mb-8">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Projects
+            </a>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-wood">Residential</span>
+                    <h1 class="text-5xl font-bold mt-2 mb-6">Modern Luxury Villa</h1>
+                    <p class="text-gray-400 text-lg mb-8">
+                        A contemporary villa design that seamlessly blends modern aesthetics with functional living spaces, 
+                        creating an environment that's both luxurious and comfortable.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Location</h3>
+                            <p class="text-gray-400">Jakarta, Indonesia</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Year</h3>
+                            <p class="text-gray-400">2023</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Area</h3>
+                            <p class="text-gray-400">450 m²</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Services</h3>
+                            <p class="text-gray-400">Interior & Architecture</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-[600px] rounded-lg overflow-hidden">
+                    <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" alt="Modern Luxury Villa" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold mb-12">Project <span class="text-wood">Gallery</span></h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+                    <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" alt="Gallery 1" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fas fa-search-plus text-3xl"></i>
+                    </div>
+                </div>
+                <div class="group relative aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+                    <img src="https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg" alt="Gallery 2" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fas fa-search-plus text-3xl"></i>
+                    </div>
+                </div>
+                <div class="group relative aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+                    <img src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg" alt="Gallery 3" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fas fa-search-plus text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Description -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-semibold mb-8">Project <span class="text-wood">Overview</span></h2>
+                    <div class="space-y-6 text-gray-400">
+                        <p>
+                            This modern luxury villa project showcases our commitment to creating spaces that are both 
+                            aesthetically pleasing and highly functional. The design emphasizes open spaces, natural light, 
+                            and seamless indoor-outdoor transitions.
+                        </p>
+                        <p>
+                            The villa features a minimalist exterior design with clean lines and modern materials, while the 
+                            interior spaces are warm and inviting, incorporating natural elements and luxurious finishes.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-semibold mb-8">Project <span class="text-wood">Features</span></h2>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-wood mr-4"></i>
+                            Open-concept living spaces
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-wood mr-4"></i>
+                            Floor-to-ceiling windows
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-wood mr-4"></i>
+                            Custom furniture and fixtures
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-wood mr-4"></i>
+                            Smart home integration
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-wood mr-4"></i>
+                            Sustainable materials
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-wood mr-4"></i>
+                            Energy-efficient design
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Project -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <p class="text-gray-400 mb-4">Next Project</p>
+                <h2 class="text-4xl font-semibold mb-8">Urban Office Space</h2>
+                <a href="./project-detail.html" class="inline-flex items-center text-wood hover:text-white transition-colors">
+                    View Project <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">WOODYORK.</p>
+                    <p class="text-sm text-gray-600">We're welcoming you always.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div>
+                        <h4 class="text-sm font-semibold mb-4">Quick links</h4>
+                        <ul class="text-sm text-gray-400">
+                            <li><a href="./about.html" class="hover:text-wood">About Us</a></li>
+                            <li><a href="./services.html" class="hover:text-wood">Services</a></li>
+                            <li><a href="./projects.html" class="text-wood">Projects</a></li>
+                            <li><a href="../index.html#contact" class="hover:text-wood">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold mb-4">Services</h4>
+                        <ul class="text-sm text-gray-400">
+                            <li>Design of Houses</li>
+                            <li>Interior Design</li>
+                            <li>Exterior Design</li>
+                            <li>Custom Furniture</li>
+                            <li>Design of Public Objects</li>
+                            <li>Construction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-600">
+                ©2025 Woodyork. All rights reserved - Produced by Voxlabs
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.innerHTML = isOpen 
+                ? '<i class="fas fa-times text-2xl"></i>' 
+                : '<i class="fas fa-bars text-2xl"></i>';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+            }
+        });
+    </script>
+</body>
+</html>
