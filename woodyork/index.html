@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woodyork - Interior Design & Construction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'wood': '#C8A27C',
+                        'dark': '#1A1A1A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#1A1A1A] text-white font-[Poppins]">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-dark/80 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/" class="text-2xl font-semibold">woodyork</a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="./pages/about.html" class="text-gray-300 hover:text-wood transition">about</a>
+                    <a href="./pages/projects.html" class="text-gray-300 hover:text-wood transition">projects</a>
+                    <a href="./pages/services.html" class="text-gray-300 hover:text-wood transition">services</a>
+                    <a href="#contact" class="text-gray-300 hover:text-wood transition">contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4 bg-dark/95 p-4 rounded-lg">
+                    <a href="./pages/about.html" class="text-gray-300 hover:text-wood transition">about</a>
+                    <a href="./pages/projects.html" class="text-gray-300 hover:text-wood transition">projects</a>
+                    <a href="./pages/services.html" class="text-gray-300 hover:text-wood transition">services</a>
+                    <a href="#contact" class="text-gray-300 hover:text-wood transition">contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="h-screen relative flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" alt="Hero Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 container mx-auto px-6">
+            <div class="max-w-3xl">
+                <div class="flex items-center space-x-4 mb-8 animate-fade-in-up" style="animation-delay: 0.2s">
+                    <div class="w-20 h-20 bg-wood rounded-full flex items-center justify-center">
+                        <span class="text-3xl font-bold">W.</span>
+                    </div>
+                    <div class="w-32 h-[2px] bg-wood"></div>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up" style="animation-delay: 0.4s">
+                    Creating Spaces<br>
+                    <span class="text-wood">That Inspire</span>
+                </h1>
+                
+                <p class="text-gray-300 text-lg md:text-xl mb-12 max-w-2xl animate-fade-in-up" style="animation-delay: 0.6s">
+                    Transform your space with our expert interior design and construction services. 
+                    We bring your vision to life with precision and style.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style="animation-delay: 0.8s">
+                    <a href="#projects" class="px-8 py-4 bg-wood text-white rounded hover:bg-wood/90 transition duration-300 flex items-center justify-center group">
+                        Explore Projects
+                        <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#contact" class="px-8 py-4 border border-wood text-wood hover:bg-wood hover:text-white transition duration-300 flex items-center justify-center group">
+                        Contact Us
+                        <i class="fas fa-envelope ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-wood">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <style>
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fade-in-up 0.6s ease-out forwards;
+            opacity: 0;
+        }
+    </style>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23C8A27C\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); background-repeat: repeat;"></div>
+        </div>
+
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative h-[600px] rounded-lg overflow-hidden group">
+                    <!-- Video Background -->
+                    <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
+                        <source src="https://player.vimeo.com/external/463879588.sd.mp4?s=0d182dc37f15c1e9c1a8d71c5a675aa0f5b2d06c&profile_id=164" type="video/mp4">
+                    </video>
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
+                    <!-- Play Button -->
+                    <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-wood/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-play text-2xl text-white"></i>
+                    </button>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h2 class="text-4xl font-semibold">
+                            Hello,<br>Welcome to <span class="text-wood">Woodyork</span>
+                        </h2>
+                        <div class="w-20 h-1 bg-wood"></div>
+                    </div>
+
+                    <p class="text-gray-400 leading-relaxed">
+                        Kami adalah studio desain yang bergerak di bidang interior dan eksterior yang sudah berdiri sejak tahun 2015. 
+                        Selama berjalan nya perusahaan kami telah mengerjakan berbagai macam project dari berbagai kalangan.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="group">
+                            <div class="flex items-baseline gap-2">
+                                <h3 class="text-5xl font-bold text-wood group-hover:scale-110 transition-transform">134</h3>
+                                <span class="text-xl text-wood">+</span>
+                            </div>
+                            <p class="text-gray-400 mt-2">Projects Finished</p>
+                        </div>
+                        <div class="group">
+                            <div class="flex items-baseline gap-2">
+                                <h3 class="text-5xl font-bold text-wood group-hover:scale-110 transition-transform">65</h3>
+                                <span class="text-xl text-wood">+</span>
+                            </div>
+                            <p class="text-gray-400 mt-2">Projects in Progress</p>
+                        </div>
+                    </div>
+
+                    <a href="./pages/about.html" class="group px-8 py-4 bg-wood text-white hover:bg-wood/90 transition duration-300 inline-flex items-center rounded">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold mb-12">OUR <span class="text-wood">SERVICES</span></h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Cards -->
+                <div class="group bg-black/50 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg" alt="House Design" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-500"></div>
+                        <div class="absolute top-4 right-4">
+                            <i class="fas fa-home text-2xl text-wood"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4 group-hover:text-wood transition-colors">Design of Houses</h3>
+                        <p class="text-gray-400 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                            Transform your dream home into reality with our expert architectural design services.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="group bg-black/50 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" alt="Interior Design" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-500"></div>
+                        <div class="absolute top-4 right-4">
+                            <i class="fas fa-couch text-2xl text-wood"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4 group-hover:text-wood transition-colors">Interior Design</h3>
+                        <p class="text-gray-400 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                            Create stunning interior spaces that reflect your style and personality.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="group bg-black/50 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/323776/pexels-photo-323776.jpeg" alt="Exterior Design" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-500"></div>
+                        <div class="absolute top-4 right-4">
+                            <i class="fas fa-building text-2xl text-wood"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4 group-hover:text-wood transition-colors">Exterior Design</h3>
+                        <p class="text-gray-400 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                            Make a lasting impression with beautiful and functional exterior designs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="group bg-black/50 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg" alt="Custom Furniture" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-500"></div>
+                        <div class="absolute top-4 right-4">
+                            <i class="fas fa-chair text-2xl text-wood"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4 group-hover:text-wood transition-colors">Custom Furniture</h3>
+                        <p class="text-gray-400 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                            Unique furniture pieces crafted to match your space and requirements.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="group bg-black/50 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg" alt="Public Objects" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-500"></div>
+                        <div class="absolute top-4 right-4">
+                            <i class="fas fa-city text-2xl text-wood"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4 group-hover:text-wood transition-colors">Design of Public Objects</h3>
+                        <p class="text-gray-400 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                            Innovative designs for public spaces and commercial environments.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="group bg-black/50 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/157811/pexels-photo-157811.jpeg" alt="Construction" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-500"></div>
+                        <div class="absolute top-4 right-4">
+                            <i class="fas fa-hard-hat text-2xl text-wood"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4 group-hover:text-wood transition-colors">Construction</h3>
+                        <p class="text-gray-400 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                            Full-service construction management and implementation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="./pages/services.html" class="group px-8 py-3 border border-wood text-wood hover:bg-wood hover:text-white transition duration-300 inline-flex items-center">
+                    Explore Services
+                    <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold mb-12">FEATURED <span class="text-wood">PROJECT</span></h2>
+            
+            <!-- Before/After Slider -->
+            <div class="mb-12 relative h-[600px] rounded-lg overflow-hidden group">
+                <div id="before-after-slider" class="relative w-full h-full">
+                    <!-- After Image (Full width) -->
+                    <div class="absolute inset-0">
+                        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" alt="After" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-black/80 px-4 py-2 rounded-full text-sm">Reality/After</div>
+                    </div>
+                    <!-- Before Image (Clip with slider) -->
+                    <div id="before-image" class="absolute inset-0 w-1/2 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg" alt="Before" class="absolute left-0 top-0 w-[200%] h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-black/80 px-4 py-2 rounded-full text-sm">Design/Before</div>
+                    </div>
+                    <!-- Slider Handle -->
+                    <div id="slider-handle" class="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize group-hover:bg-wood transition-colors"
+                        style="left: 50%;">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:bg-wood transition-colors">
+                            <i class="fas fa-arrows-alt-h text-black"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Cards -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden rounded-lg transition-transform duration-500 hover:-translate-y-2">
+                    <div class="aspect-w-4 aspect-h-3">
+                        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" alt="Modern Luxury" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black">
+                        <h3 class="text-xl font-semibold mb-2 group-hover:text-wood transition-colors">Modern Luxury</h3>
+                        <p class="text-gray-400">Interior Design</p>
+                        <a href="./pages/project-detail.html" class="mt-4 inline-block text-wood hover:text-white transition-colors">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg transition-transform duration-500 hover:-translate-y-2">
+                    <div class="aspect-w-4 aspect-h-3">
+                        <img src="https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg" alt="Modern Minimalist" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black">
+                        <h3 class="text-xl font-semibold mb-2 group-hover:text-wood transition-colors">Modern Minimalist</h3>
+                        <p class="text-gray-400">Interior Design</p>
+                        <a href="./pages/project-detail.html" class="mt-4 inline-block text-wood hover:text-white transition-colors">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg transition-transform duration-500 hover:-translate-y-2">
+                    <div class="aspect-w-4 aspect-h-3">
+                        <img src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg" alt="Japanese Minimalist" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black">
+                        <h3 class="text-xl font-semibold mb-2 group-hover:text-wood transition-colors">Japanese Minimalist</h3>
+                        <p class="text-gray-400">Interior Design</p>
+                        <a href="./pages/project-detail.html" class="mt-4 inline-block text-wood hover:text-white transition-colors">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="./pages/projects.html" class="px-8 py-3 border border-wood text-wood hover:bg-wood hover:text-white transition duration-300">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold mb-12">Contact Us</h2>
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Contact Info -->
+                <div class="lg:col-span-1">
+                    <div class="space-y-8">
+                        <div class="p-6 border border-gray-800 rounded-lg hover:border-wood transition-all duration-300">
+                            <i class="fas fa-map-marker-alt text-wood text-2xl mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Visit Us</h3>
+                            <p class="text-gray-400">Jalan Kenanga No.123, Kota, Indonesia</p>
+                        </div>
+                        <div class="p-6 border border-gray-800 rounded-lg hover:border-wood transition-all duration-300">
+                            <i class="fab fa-whatsapp text-wood text-2xl mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Call Us</h3>
+                            <p class="text-gray-400">+62 123 4567 890</p>
+                        </div>
+                        <div class="p-6 border border-gray-800 rounded-lg hover:border-wood transition-all duration-300">
+                            <i class="fab fa-instagram text-wood text-2xl mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Our Instagram</h3>
+                            <p class="text-gray-400">@woodyork</p>
+                        </div>
+                        <div class="p-6 border border-gray-800 rounded-lg hover:border-wood transition-all duration-300">
+                            <i class="fas fa-envelope text-wood text-2xl mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Email Us</h3>
+                            <p class="text-gray-400">woodyork@email.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-2 bg-black/50 p-8 rounded-lg backdrop-blur">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 bg-dark border border-gray-800 rounded-lg focus:outline-none focus:border-wood text-white transition-colors"
+                                    placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 bg-dark border border-gray-800 rounded-lg focus:outline-none focus:border-wood text-white transition-colors"
+                                    placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-400 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                class="w-full px-4 py-3 bg-dark border border-gray-800 rounded-lg focus:outline-none focus:border-wood text-white transition-colors"
+                                placeholder="How can we help?">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="6" required
+                                class="w-full px-4 py-3 bg-dark border border-gray-800 rounded-lg focus:outline-none focus:border-wood text-white transition-colors resize-none"
+                                placeholder="Your message..."></textarea>
+                        </div>
+                        <div>
+                            <button type="submit"
+                                class="w-full px-8 py-4 bg-wood text-white rounded-lg hover:bg-wood/90 transition duration-300 flex items-center justify-center group">
+                                Send Message
+                                <i class="fas fa-paper-plane ml-2 group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">WOODYORK.</p>
+                    <p class="text-sm text-gray-600">We're welcoming you always.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div>
+                        <h4 class="text-sm font-semibold mb-4">Quick links</h4>
+                        <ul class="text-sm text-gray-400">
+                            <li><a href="./pages/about.html" class="hover:text-wood">About Us</a></li>
+                            <li><a href="./pages/services.html" class="hover:text-wood">Services</a></li>
+                            <li><a href="./pages/projects.html" class="hover:text-wood">Projects</a></li>
+                            <li><a href="#contact" class="hover:text-wood">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold mb-4">Services</h4>
+                        <ul class="text-sm text-gray-400">
+                            <li>Design of Houses</li>
+                            <li>Interior Design</li>
+                            <li>Exterior Design</li>
+                            <li>Custom Furniture</li>
+                            <li>Design of Public Objects</li>
+                            <li>Construction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-600">
+                ©2025 Woodyork. All rights reserved - Produced by Voxlabs
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-sm"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl">
+            <div class="relative aspect-video rounded-lg overflow-hidden">
+                <iframe id="video-iframe" class="absolute inset-0 w-full h-full"
+                    src="" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <button id="close-modal" class="absolute -top-12 right-0 text-white hover:text-wood transition-colors">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.innerHTML = isOpen 
+                ? '<i class="fas fa-times text-2xl"></i>' 
+                : '<i class="fas fa-bars text-2xl"></i>';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+            }
+        });
+
+        // Video Modal functionality
+        const videoModal = document.getElementById('video-modal');
+        const videoIframe = document.getElementById('video-iframe');
+        const closeModal = document.getElementById('close-modal');
+        const playButton = document.querySelector('.group button'); // Play button in about section
+
+        playButton.addEventListener('click', () => {
+            videoModal.classList.remove('hidden');
+            videoIframe.src = 'https://player.vimeo.com/video/463879588?autoplay=1&title=0&byline=0&portrait=0';
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeModal.addEventListener('click', () => {
+            videoModal.classList.add('hidden');
+            videoIframe.src = '';
+            document.body.style.overflow = '';
+        });
+
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                closeModal.click();
+            }
+        });
+
+        // Before/After Slider functionality
+        const slider = document.getElementById('before-after-slider');
+        const beforeImage = document.getElementById('before-image');
+        const sliderHandle = document.getElementById('slider-handle');
+        let isResizing = false;
+
+        // Handle mouse/touch events for slider
+        const startSliding = (e) => {
+            isResizing = true;
+            slider.classList.add('sliding');
+        };
+
+        const stopSliding = (e) => {
+            isResizing = false;
+            slider.classList.remove('sliding');
+        };
+
+        const move = (e) => {
+            if (!isResizing) return;
+
+            const sliderRect = slider.getBoundingClientRect();
+            const x = (e.type === 'mousemove' ? e.pageX : e.touches[0].pageX) - sliderRect.left;
+            const position = Math.max(0, Math.min(x / sliderRect.width * 100, 100));
+
+            beforeImage.style.width = `${position}%`;
+            sliderHandle.style.left = `${position}%`;
+        };
+
+        // Mouse events
+        sliderHandle.addEventListener('mousedown', startSliding);
+        document.addEventListener('mousemove', move);
+        document.addEventListener('mouseup', stopSliding);
+
+        // Touch events
+        sliderHandle.addEventListener('touchstart', startSliding);
+        document.addEventListener('touchmove', move);
+        document.addEventListener('touchend', stopSliding);
+
+        // Contact form handling
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would typically send the data to a server
+            console.log('Form submitted:', data);
+            
+            // Show success message
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalContent = submitButton.innerHTML;
+            
+            submitButton.innerHTML = '<i class="fas fa-check mr-2"></i> Message Sent!';
+            submitButton.classList.add('bg-green-600');
+            submitButton.disabled = true;
+            
+            // Reset form and button after 3 seconds
+            setTimeout(() => {
+                contactForm.reset();
+                submitButton.innerHTML = originalContent;
+                submitButton.classList.remove('bg-green-600');
+                submitButton.disabled = false;
+            }, 3000);
+        });
+
+        // Escape key closes modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !videoModal.classList.contains('hidden')) {
+                closeModal.click();
+            }
+        });
+    </script>
+</body>
+</html>
