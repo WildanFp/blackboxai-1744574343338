@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Woodyork</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'wood': '#C8A27C',
+                        'dark': '#1A1A1A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#1A1A1A] text-white font-[Poppins]">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-dark/80 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="text-2xl font-semibold">woodyork</a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="./about.html" class="text-wood transition">about</a>
+                    <a href="./projects.html" class="text-gray-300 hover:text-wood transition">projects</a>
+                    <a href="./services.html" class="text-gray-300 hover:text-wood transition">services</a>
+                    <a href="../index.html#contact" class="text-gray-300 hover:text-wood transition">contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4 bg-dark/95 p-4 rounded-lg">
+                    <a href="./about.html" class="text-wood transition">about</a>
+                    <a href="./projects.html" class="text-gray-300 hover:text-wood transition">projects</a>
+                    <a href="./services.html" class="text-gray-300 hover:text-wood transition">services</a>
+                    <a href="../index.html#contact" class="text-gray-300 hover:text-wood transition">contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-20 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl font-bold mb-6">About <span class="text-wood">Us</span></h1>
+            <p class="text-gray-400 max-w-2xl">Learn more about our journey, our team, and our commitment to creating exceptional spaces.</p>
+        </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="py-20 bg-black relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23C8A27C\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); background-repeat: repeat;"></div>
+        </div>
+
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative h-[600px] rounded-lg overflow-hidden">
+                    <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" alt="Our Story" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h2 class="text-4xl font-semibold">Our Story</h2>
+                        <div class="w-20 h-1 bg-wood"></div>
+                    </div>
+
+                    <div class="space-y-6 text-gray-400">
+                        <p>
+                            Founded in 2015, Woodyork has grown from a small design studio to a comprehensive interior design and construction firm. Our journey began with a simple vision: to create spaces that inspire and transform lives.
+                        </p>
+                        <p>
+                            Over the years, we've had the privilege of working with clients from all walks of life, each bringing unique visions and challenges that have helped us grow and innovate.
+                        </p>
+                        <p>
+                            Today, we continue to push boundaries in design and construction, always staying true to our core values of quality, innovation, and client satisfaction.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="group">
+                            <div class="flex items-baseline gap-2">
+                                <h3 class="text-5xl font-bold text-wood group-hover:scale-110 transition-transform">8+</h3>
+                            </div>
+                            <p class="text-gray-400 mt-2">Years Experience</p>
+                        </div>
+                        <div class="group">
+                            <div class="flex items-baseline gap-2">
+                                <h3 class="text-5xl font-bold text-wood group-hover:scale-110 transition-transform">50+</h3>
+                            </div>
+                            <p class="text-gray-400 mt-2">Team Members</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold mb-12">Our <span class="text-wood">Values</span></h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group bg-black/50 p-8 rounded-lg hover:-translate-y-2 transition-all duration-500">
+                    <div class="text-wood text-3xl mb-6">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Innovation</h3>
+                    <p class="text-gray-400">
+                        We constantly push boundaries and embrace new ideas to create unique and forward-thinking designs.
+                    </p>
+                </div>
+
+                <div class="group bg-black/50 p-8 rounded-lg hover:-translate-y-2 transition-all duration-500">
+                    <div class="text-wood text-3xl mb-6">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Excellence</h3>
+                    <p class="text-gray-400">
+                        We maintain the highest standards in every aspect of our work, from design to execution.
+                    </p>
+                </div>
+
+                <div class="group bg-black/50 p-8 rounded-lg hover:-translate-y-2 transition-all duration-500">
+                    <div class="text-wood text-3xl mb-6">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Integrity</h3>
+                    <p class="text-gray-400">
+                        We build trust through honest communication and transparent business practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">WOODYORK.</p>
+                    <p class="text-sm text-gray-600">We're welcoming you always.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div>
+                        <h4 class="text-sm font-semibold mb-4">Quick links</h4>
+                        <ul class="text-sm text-gray-400">
+                            <li><a href="./about.html" class="text-wood">About Us</a></li>
+                            <li><a href="./services.html" class="hover:text-wood">Services</a></li>
+                            <li><a href="./projects.html" class="hover:text-wood">Projects</a></li>
+                            <li><a href="../index.html#contact" class="hover:text-wood">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold mb-4">Services</h4>
+                        <ul class="text-sm text-gray-400">
+                            <li>Design of Houses</li>
+                            <li>Interior Design</li>
+                            <li>Exterior Design</li>
+                            <li>Custom Furniture</li>
+                            <li>Design of Public Objects</li>
+                            <li>Construction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-600">
+                ©2025 Woodyork. All rights reserved - Produced by Voxlabs
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.innerHTML = isOpen 
+                ? '<i class="fas fa-times text-2xl"></i>' 
+                : '<i class="fas fa-bars text-2xl"></i>';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+            }
+        });
+    </script>
+</body>
+</html>
